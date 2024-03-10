@@ -2,7 +2,7 @@ const express = require('express');
 const sequelize = require('./config/database');
 const bodyParser = require('body-parser');
 const path = require('path');
-const helmet = require('helmet')
+//const helmet = require('helmet')
 const compression = require('compression');
 const morgan = require('morgan');
 require('dotenv').config();
@@ -29,7 +29,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "view")));
-app.use(helmet());
+//app.use(helmet());
 app.use(compression());
 
 app.use(morgan('combine' , {stream : accessLogStream}) )

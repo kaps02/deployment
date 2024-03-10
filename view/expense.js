@@ -1,5 +1,5 @@
 // script.js
-
+//const axios =require('axios')
 document.addEventListener('DOMContentLoaded', function () {
     // Fetch expenses based on the user's preference stored in local storage
     fetchExpenses();

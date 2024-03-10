@@ -55,20 +55,7 @@ exports.expense = (req, res) => {
   res.sendFile('expense.html', { root: './view' }); 
       
 }
-/*
-exports.deleteExpenses= async(req ,res)=>{
-  const userId = req.user.UserId;
-    const id = req.params.id;
-    try {
-        // Delete the expense from the database
-        await Expense.destroy({ where: { id } });
-        res.sendStatus(200); // OK
-    } catch (error) {
-        console.error('Error deleting expense:', error);
-        res.sendStatus(500); // Internal Server Error
-    }
-    
-}*/
+
 
 exports.deleteExpense = async (req, res) => {
   const id = req.params.id;
